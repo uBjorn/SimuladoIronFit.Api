@@ -4,9 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using SimuladoIronFit.Api.Data;
 using SimuladoIronFit.Api.Models;
 using SimuladoIronFit.Api.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SimuladoIronFit.Api.Controllers
 {
+    [Authorize(Roles = "AcademiaAdmin")]
     [ApiController]
     [Route("api/[controller]")]
     public class AlunosController : ControllerBase
